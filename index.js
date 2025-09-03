@@ -17,6 +17,16 @@ app.use(cors({
 }));
 app.use(express.json());
 
+// Health check route
+app.get("/health", (req, res) => {
+  res.json({ 
+    status: "OK", 
+    message: "Store Ratings API is running",
+    timestamp: new Date().toISOString(),
+    version: "1.0.0"
+  });
+});
+
 // Secret for JWT
 const JWT_SECRET = process.env.JWT_SECRET || "super-secret-key";
 
