@@ -10,7 +10,7 @@ const prisma = new PrismaClient();
 app.use(cors({
   origin: [
     'http://localhost:3000',
-    'https://roxiler-systems-client.vercel.app/', // Replace with your actual Vercel URL
+    'https://roxiler-systems-client.vercel.app', // Replace with your actual Vercel URL
     'https://*.vercel.app'
   ],
   credentials: true
